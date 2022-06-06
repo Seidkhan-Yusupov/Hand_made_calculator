@@ -1,0 +1,93 @@
+@font-face {
+    font-family: Calculator;
+    src: url(/digital-7.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Share+Tech+Mono&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #7c7c7c; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #7c7c7c 0%, #000000 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  #7c7c7c 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: no-repeat radial-gradient(ellipse at center,  #7c7c7c 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.calculator {
+    background-color: #353535;
+    width: 300px;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 6px 0 #a1a1a1, 0 8px 10px rgba(0, 0, 0, 0.75);
+    font-family: 'Share Tech Mono', monospace;
+}
+
+
+.result {
+    background-color: #cecfac;
+    color: #3b3b32;
+    width: 90%;
+    margin: 8px 0 20px 10px;
+    text-align: right;
+    height: 50px;
+    line-height: 50px;
+    font-size: 42px;
+    padding-right: 10px;
+    overflow: hidden;
+    font-family: Calculator;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5), inset 0px 2px 0 #a1a1a1;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+    background: #4e4e4e;
+    padding: 10px;
+    width: 15%;
+    color: #fff;
+    float: left;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 0 #a5a5a5, 0 2px 5px rgba(0, 0, 0, 0.75);
+    user-select: none;
+}
+
+ul li:active {
+    position: relative;
+    top: 5px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+ul li:nth-child(16) {
+    height: 75px;
+    line-height: 75px;
+}
+
+ul li:last-child {
+    margin-top: -47px;
+    width: 65%;
+}
+
+.signature {
+    color: #fff;
+    font-size: 0.75rem;
+    position: relative;
+    float: right;
+    top: 4px;
+    z-index: -1;
+    width: 200px;
+}
