@@ -1,25 +1,42 @@
-const lis = document.querySelectorAll('ul li');
-lis.forEach((node) => {
-    node.addEventListener('mousedown', function(event) {
-        const value = node.innerText.trim();
-        const result = document.querySelector(".result");
-        const resultText = result.innerText.trim()
+const $lis = document.querySelectorAll("ul li");
 
-        if(resultText == '0' || resultText == 'undefined' || resultText == 'Infinity') {
-            result.innerText = '';
-        }
-        
-        if(value == '=') {
-            let solution = eval(resultText);
-            result.innerText = solution;
-            return true
-        }
-        
-        if(value.toLowerCase() == 'c') {
-            result.innerText = '0'
-            return true
+$lis.forEach((li) => {
+    li.addEventListener("click", (event) => {
+        event.preventDefault();
+        const value = li.innerText.trim();
+        let $result = document.querySelector(".result");
+        const resultText = $result.innerText.trim();
+
+        if (
+            resultText == "0" ||
+            resultText == "Infinity" ||
+            resultText == "undefined"
+        ) {
+            $result.innerText = "";
         }
 
-        result.append(value)
-    })
-})
+        if (value.toLowerCase() == "c") {
+            $result.innerText = "0";
+            return true;
+        }
+
+        if (value == "=") {
+            $result.innerText = eval(resultText);
+            return true;
+        }
+
+        $result.append(value);
+    });
+});
+
+// Todo: Grab lis
+// Todo: loop through each li
+// Todo: add an event listener
+// Todo: preventDefault()
+// Todo: get the value of the li without extra spaces
+// Todo: get the result field
+// Todo: get the result text
+// Todo: make the c button clear the result window and return true
+// Todo: make the button get written side by side by appending the value
+// Todo: make the = button evaluate what you have written in the result window
+// Todo: get rid of the = 0 infinity undefined get written in the result window
